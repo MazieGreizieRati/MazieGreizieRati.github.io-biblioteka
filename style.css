@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-color: #f9f9f9;
 }
 
 header {
@@ -40,9 +41,154 @@ main {
     text-align: center;
 }
 
+.news-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 70%;
+    margin: auto;
+}
+
+.news-item {
+    display: flex;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+}
+
+/*.news-image {*/
+/*    width: 40%;*/
+/*    object-fit: cover;*/
+/*}*/
+.news-image {
+    width: 80%;
+    max-height: 400px; /* Pielāgo augstumu, lai bilde nebūtu pārāk liela */
+    object-fit: cover; /* Nodrošina, ka bilde labi ieguļas blokā */
+    border-radius: 20px; /* Noapaļoti stūri, lai izskatās estētiski */
+    padding: 10px;
+}
+
+.news-content {
+    padding: 20px;
+    text-align: left;
+    width: 60%;
+}
+
+.news-content h3 {
+    margin: 0;
+    color: #333;
+}
+
+.news-content p {
+    margin: 10px 0;
+    color: #666;
+}
+
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px 0;
+    margin-top: 20px;
+}
+
+.team-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.team-member {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.team-member p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.team-member a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.team-member a:hover {
+    text-decoration: underline;
+}
+
+.location-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Nodrošina, ka viss labi izskatās arī uz mazākiem ekrāniem */
+    width: 80%;
+    max-width: 1000px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.image-container {
+    flex: 1;
+    padding: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.info-container {
+    flex: 1;
+    padding: 20px;
+}
+
+.map {
+    margin-top: 20px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsivitāte mazākiem ekrāniem */
+@media (max-width: 768px) {
+    .location-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-container {
+        padding: 10px;
+    }
 }
